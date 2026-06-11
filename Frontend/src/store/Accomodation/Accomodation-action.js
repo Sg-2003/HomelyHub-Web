@@ -3,7 +3,7 @@ import {axiosInstance} from "../../utils/axios";
 
 export const createAccomodation = (accomodationData)=> async(dispatch)=>{
     try{
-    dispatch(accomodationActions.getAccomodation())
+    dispatch(accomodationActions.getAccomodationRequest())
     const response = await axiosInstance.post("/v1/rent/user/newAccommodation", accomodationData);
     if(!response){
         throw new Error("Could not get any accomodation");
