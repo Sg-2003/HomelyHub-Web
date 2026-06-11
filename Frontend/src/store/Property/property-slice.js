@@ -14,8 +14,8 @@ const propertSlice = createSlice({
             state.loading = true
         },
         getProperties(state, action) {
-            state.properties = action.payload.data;
-            state.totalProperties = action.payload.all_properties;
+            state.properties = (action.payload && action.payload.data) || [];
+            state.totalProperties = (action.payload && action.payload.all_properties) || 0;
             state.loading = false;
         },
         updateSearchParams:(state, action) =>{
@@ -25,7 +25,8 @@ const propertSlice = createSlice({
         }
         },
         getErrors(state, action){
-            state.error = action.payload
+            state.error = action.payload;
+            state.loading = false;
         }
     }
 })

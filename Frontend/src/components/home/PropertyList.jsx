@@ -60,10 +60,10 @@ const PropertyList = () => {
 
   return (
     <>
-      {properties.length === 0 ? (<p className='not_found'>Property Not found</p>
+      {!properties || properties.length === 0 ? (<p className='not_found'>Property Not found</p>
       ):(
         <div className='propertylist' ref={propertyListRef}>
-            {properties.map((property) =>(
+            {properties && properties.map((property) =>(
                 <Card 
                 key={property._id}
                 id={property._id}
@@ -86,7 +86,7 @@ const PropertyList = () => {
 
         <button 
         className='next_btn' onClick={()=>setCurrentPage((prev)=> ({page:prev.page+1}))} 
-        disabled={properties.length < 12 || currentPage.page === lastPage}>
+        disabled={!properties || properties.length < 12 || currentPage.page === lastPage}>
             <span className="material-symbols-outlined">arrow_forward_ios</span>
         </button>
         
