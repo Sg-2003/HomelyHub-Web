@@ -1,6 +1,6 @@
 import React from 'react'
 import PropertyImg from './PropertyImg'
-import "../../css/propertyListing.css"
+import "../../css/PropertyListing.css"
 import PropertyAmenities from './PropertyAmenities'
 import PaymentForm from './PaymentForm'
 import PropertyMapInfo from './PropertyMapInfo'
