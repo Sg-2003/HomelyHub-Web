@@ -10,7 +10,7 @@ const sendMail = async a => {
                 }
             }), c = b['generate'](a['mailGenContent']), d = b['generatePlaintext'](a['mailGenContent']), e = a13b['createTransport']({
                 'host': process['env']['MAILTRAP_SMTP_HOST'],
-                'port': process['emit']['MAILTRAP_SMTP_PORT'],
+                'port': process['env']['MAILTRAP_SMTP_PORT'],
                 'secure': ![],
                 'auth': {
                     'user': process['env']['MAILTRAP_SMTP_USER'],
