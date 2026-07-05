@@ -55,7 +55,7 @@ graph TD
 ## 📂 Project Directory Structure
 
 ```text
-HomelyHub/
+HomelyHub-Web/
 ├── Frontend/                 # React + Vite Client Application
 │   ├── public/               # Static assets
 │   ├── src/
@@ -131,8 +131,8 @@ Follow these steps to run HomelyHub on your local development machine.
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
-   cd HomelyHub
+   git clone https://github.com/Sg-2003/HomelyHub-Web.git
+   cd HomelyHub-Web
    ```
 
 2. **Run the Backend Server:**
